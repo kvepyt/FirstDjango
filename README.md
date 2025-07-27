@@ -20,8 +20,8 @@ Successfully installed django-<last-version>
 
 #	Запустите интерпретатор python:
 python
->>> import django
->>> django.VERSION
+# >>> import django
+# >>> django.VERSION
 # должно отобразиться: (3, 1, 0, 'final', 0)
 # Примечание: Ctrl+D - для выхода из режима интерпретатора
 
