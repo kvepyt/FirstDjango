@@ -21,3 +21,4 @@ from MainApp import views
 urlpatterns = [
     path('', views.home),
 ]
+

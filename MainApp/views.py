@@ -1,10 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from MainApp.models import Item
+from django.core.exceptions import ObjectDoesNotExist
 
 # Create your views here.
-def home(request):
-    text = """"
-    <h1>"Изучаем django"</h1>
-    <strong>Автор</strong>: <i>Косарев В.Е.</i>
-    """
-    return HttpResponse(text)
+def home(request) -> HttpResponse:
+    context = {
+        "name": "Косарев Валерий",
+        "email": "kve@kve60.ru"
+    }
+    return render(request, "index.html", context)
+
