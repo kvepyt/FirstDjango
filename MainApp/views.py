@@ -43,5 +43,4 @@ def get_item(request, item_id: int):
             <p> Количество: {item["quantity"]} </p>
             """
             return HttpResponse(result)
-#    return HttpResponseNotFound(f'<strong>Item with id={item_id} not found </strong>')
     
