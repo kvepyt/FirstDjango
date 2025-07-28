@@ -1,5 +1,5 @@
 from django.http import HttpResponse, HttpResponseNotFound
-from django.core.exceptions import ObjectDoesNotExist
+#from django.core.exceptions import ObjectDoesNotExist
 
 # Create your views here.
 author = {
@@ -43,4 +43,5 @@ def get_item(request, item_id: int):
             <p> Количество: {item["quantity"]} </p>
             """
             return HttpResponse(result)
+    return HttpResponseNotFound(f'<strong>Item with id={item_id} not found </strong>')
     
