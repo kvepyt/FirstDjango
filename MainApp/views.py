@@ -12,7 +12,7 @@ author = {
 items = [
    {"id": 1, "name": "Кроссовки abibas", "quantity":10},
    {"id": 2, "name": "Куртка кожаная", "quantity":42},
-   {"id": 3, "name": "Coca-cola 1 литр", "quantity":23},
+   {"id": 3, "name": "Coca-cola 1 литр", "quantity":73},
    {"id": 4, "name": "Картофель фри", "quantity":152},
    {"id": 5, "name": "Кепка", "quantity":64},
 ]
