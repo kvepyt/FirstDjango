@@ -6,6 +6,10 @@
     <title>About</title>
 </head>
 <body>
+    <header>
+        / <a href="/">Home</a> / <a href="/about">About</a> / <a href="/items">Список товаров </a>
+    </header>
+
     <h1> Страница автора </h1>
     {# Пример комментария #}
     {% comment %} Это тоже комментарий {% endcomment %}
@@ -14,8 +18,5 @@
     Фамилия: {{ author.last_name }}<br>
     телефон: {{ author.phone }} <br>
     email: {{ author.email }}<br>
-    <a href = "/">Home</a><br>
-    <br>
-    <a href = "/items">Список товаров</a>  
 </body>
 </html>

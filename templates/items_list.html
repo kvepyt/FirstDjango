@@ -6,6 +6,10 @@
     <title>Список товаров</title>
 </head>
 <body>
+    <header>
+        / <a href="/">Home</a> / <a href="/about">About</a> / <a href="/items">Список товаров </a>
+    </header>
+
     <h1> Список товаров </h1>
     {# Пример комментария #}
     {% comment %} Это тоже комментарий {% endcomment %}
@@ -14,8 +18,5 @@
             <li> <a href='/item/{{ item.id }}'> {{item.id}} {{ item.name }} </a> </li>
         {% endfor %}
     </ul>
-    <a href = "/">Home</a><br>
-    <br>
-    <a href = "/about">About</a>
 </body>
 </html>

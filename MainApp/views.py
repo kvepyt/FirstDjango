@@ -52,7 +52,7 @@ def get_item(request, item_id: int):
                 "item": item
                 }
             return render (request,"item_page.html", context)
-    return HttpResponseNotFound(f'<strong>Item with id={item_id} not found </strong>')
+    return render(request, "errors.html", f'<strong>Item with id={item_id} not found </strong>')
     
 
 def get_items(request):
