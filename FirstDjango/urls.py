@@ -25,4 +25,3 @@ urlpatterns = [
     path('item/<int:item_id>', views.get_item, name='item-detail'),
     path('items', views.get_items, name='items-list'),
 ]
-
