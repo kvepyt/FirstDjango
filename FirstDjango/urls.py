@@ -21,6 +21,7 @@ from django.conf import settings
 
 urlpatterns = [
 #    path('', views.home, name='home'),
+#    path('', views.home1, name='home1'),
     path('', views.home2, name='home2'),
     path('about', views.about, name='about'),
     path('item/<int:item_id>', views.get_item, name='item-detail'),

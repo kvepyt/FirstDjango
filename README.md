@@ -35,3 +35,33 @@ python3 manage.py runserver
 # 7-Для создания нового приложения в текущем проекте:
 python3 manage.py startapp MainApp
 
+## Запуск `ipython` в контексте `django` приложений
+```
+python manage.py shell_plus --ipython
+```
+
+## Выгрузка и загрузка данных при работе с БД
+### Выгрузка данных из БД
+```
+python manage.py dumpdata MainApp --indent 4 > MainApp/fixtures/all_items.json
+```
+### Загрузка данных в БД
+```
+python manage.py loaddata MainApp/fixtures/all_items.json
+```
+
+
+## Дополнительно
+1. Полезное расширение для шаблонов: `django`
+```
+ext install batisteo.vscode-django
+```
+2. Добавить в `settings.json`:
+```
+    "emmet.includeLanguages": {
+        "django-html": "html"
+    },
+    "files.associations": {
+        "*.html": "django-html"
+    }
+```

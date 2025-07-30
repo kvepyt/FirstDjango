@@ -38,8 +38,12 @@ def home(request):
     return HttpResponse(text)
 
 
-def home2(request) -> HttpResponse:
+def home1(request) -> HttpResponse:
     return render(request, "index.html")
+
+def home2(request) -> HttpResponse:
+    return render(request, "index2.html", context=contact)
+
 
 def about(request):
     context = f"""<h1>
