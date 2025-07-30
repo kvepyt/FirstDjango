@@ -1,4 +1,6 @@
 from django.http import HttpResponse, HttpResponseNotFound
+from django.shortcuts import render
+
 #from django.core.exceptions import ObjectDoesNotExist
 
 # Create your views here.
@@ -9,6 +11,11 @@ author = {
         "phone": "8-915-1111222",
         "email": "kve@kve60.ru",
     }
+contact = {
+    "name": "Косарев Валерий",
+    "email": "kve@kve60.ru"
+    }
+
 items = [
    {"id": 1, "name": "Кроссовки abibas", "quantity":10},
    {"id": 2, "name": "Куртка кожаная", "quantity":42},
@@ -29,6 +36,10 @@ def home(request):
     <a href = "/items">Список товаров</a>
     """
     return HttpResponse(text)
+
+
+def home2(request) -> HttpResponse:
+    return render(request, "index.html")
 
 def about(request):
     context = f"""<h1>
