@@ -23,10 +23,10 @@ def home(request):
     <strong>Автор</strong>: <i>Косарев В.Е.</i>
     <br>
     <br>
-    <a href = "http://127.0.0.1:8000/about">About</a>
+    <a href = "/about">About</a>
     <br>
     <br>
-    <a href = "http://127.0.0.1:8000/items">Список товаров</a>
+    <a href = "/items">Список товаров</a>
     """
     return HttpResponse(text)
 
@@ -39,10 +39,10 @@ def about(request):
     Почта: {author['email']} <br></h1>
     <br>
     <br>
-    <a href = "http://127.0.0.1:8000">Home</a>
+    <a href = "/">Home</a>
     <br>
     <br>
-    <a href = "http://127.0.0.1:8000/items">Список товаров</a>
+    <a href = "/items">Список товаров</a>
 """
 
     return HttpResponse(context)
@@ -63,7 +63,7 @@ def get_items(request):
     result = f"""
     <br>
     <br>
-    <a href = "http://127.0.0.1:8000">Home</a>
+    <a href = "/">Home</a>
     <br>
     <br>
     <h1> Список товаров </h1><ol>"""
