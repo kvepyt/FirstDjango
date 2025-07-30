@@ -21,6 +21,12 @@ def home(request):
     text = """
     <h1>"Изучаем django"</h1>
     <strong>Автор</strong>: <i>Косарев В.Е.</i>
+    <br>
+    <br>
+    <a href = "http://127.0.0.1:8000/about">About</a>
+    <br>
+    <br>
+    <a href = "http://127.0.0.1:8000/items">Список товаров</a>
     """
     return HttpResponse(text)
 
@@ -31,7 +37,14 @@ def about(request):
     Фамилия: {author['last_name']} <br>
     Телефон: {author['phone']} <br>
     Почта: {author['email']} <br></h1>
+    <br>
+    <br>
+    <a href = "http://127.0.0.1:8000">Home</a>
+    <br>
+    <br>
+    <a href = "http://127.0.0.1:8000/items">Список товаров</a>
 """
+
     return HttpResponse(context)
 
 """По указанному id возвращает элемент из списка"""
@@ -47,7 +60,13 @@ def get_item(request, item_id: int):
     return HttpResponseNotFound(f'<strong>Item with id={item_id} not found </strong>')
 
 def get_items(request):
-    result = "<h1> Список товаров </h1><ol>"
+    result = f"""
+    <br>
+    <br>
+    <a href = "http://127.0.0.1:8000">Home</a>
+    <br>
+    <br>
+    <h1> Список товаров </h1><ol>"""
     for item in items:
         result += f""" <li> <a href='/item/{item["id"]}'> {item["name"]} </a> </li>"""
     result += "</ol>"
