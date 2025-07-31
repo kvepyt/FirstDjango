@@ -45,6 +45,10 @@ python manage.py shell_plus --ipython
 ```
 python manage.py dumpdata MainApp --indent 4 > MainApp/fixtures/all_items.json
 ```
+### Очистка данных в БД
+```
+python manage.py flush -v 3
+```
 ### Загрузка данных в БД
 ```
 python manage.py loaddata MainApp/fixtures/all_items.json
