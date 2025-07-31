@@ -15,7 +15,7 @@
     {% comment %} Это тоже комментарий {% endcomment %}
     <ul>
         {% for item in items %}
-            <li> <a href='/item/{{ item.id }}'> {{item.id}} {{ item.name }} </a> </li>
+            <li> <a href='/item/{{ item.id }}'> {{item.id}} {{ item.name }} <i> {{ item.brand }} </i></a> </li>
         {% endfor %}
     </ul>
 </body>

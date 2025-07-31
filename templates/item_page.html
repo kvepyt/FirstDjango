@@ -11,10 +11,11 @@
     </header>
 
     <h1> Имя: {{ item.name }} </h1><br>
-        {%if item.quantity == 0 %}
+        {%if item.count == 0 %}
             <h1> Количество: Товар отсутствует </h1>
         {% else %}    
-            <h1> Количество: {{ item.quantity }} </h1>
+            <h1> Brand: {{ item.brand }} </h1>
+            <h1> Количество: {{ item.count }} </h1>
         {%  endif %}
 </body>
 </html>
