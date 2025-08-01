@@ -1,7 +1,7 @@
 from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import render
 from MainApp.models import Item
-# from django.core.exceptions import ObjectDoesNotExist
+from django.core.exceptions import ObjectDoesNotExist
 
 # Create your views here.
 author = {
@@ -15,23 +15,6 @@ contact = {
     "name": "Косарев Валерий",
     "email": "kve@kve60.ru"
 }
-
-full_contact = {
-    "name": {author['name']},
-    "Отчество": {author['middle_name']},
-    "Фамилия": {author['last_name']},
-    "Телефон": {author['phone']},
-    "Почта": {author['email']},
-}
-
-
-items = [
-    {"id": 1, "name": "Кроссовки abibas", "quantity": 10},
-    {"id": 2, "name": "Куртка кожаная", "quantity": 0},
-    {"id": 3, "name": "Coca-cola 1 литр", "quantity": 73},
-    {"id": 4, "name": "Картофель фри", "quantity": 152},
-    {"id": 5, "name": "Кепка", "quantity": 64},
-]
 
 
 def home(request) -> HttpResponse:
@@ -50,12 +33,15 @@ def about(request):
 
 def get_item(request, item_id: int):
     """TODO: get item my id from db """
-    item = Item.objects.get(id=item_id)
-    context = {
-        "item": item
-    }
+    try:
+        item = Item.objects.get(id=item_id)
+    except ObjectDoesNotExist:
+        return render(request, "errors.html", {'errors': [f'Item with id={item_id} not found']})
+    else:
+        context = {
+            "item": item,
+        }
     return render(request, "item_page.html", context)
-#    return render(request, "errors.html", {'errors': [f'Item with id={item_id} not found']})
 
 
 def get_items(request):
