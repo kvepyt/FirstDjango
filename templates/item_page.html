@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сведения о товаре</title>
-</head>
-<body>
-    <header>
-        / <a href="/">Home</a> / <a href="/about">About</a> / <a href="/items">Список товаров </a>
-    </header>
+{% extends 'base.html' %}
+{% block title %} Сведения о товаре {% endblock %}
+
+
+{% block content %}
+    {{ block.super }}
 
     <h1> Имя: {{ item.name }} </h1><br>
         <div>
@@ -20,6 +15,4 @@
         <div> 
             <h1> Описание: {{ item.description }} </h1>
         </div>
-
-</body>
-</html>
+{% endblock %}

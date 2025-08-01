@@ -10,5 +10,5 @@ class Item(models.Model):
     description = models.TextField(max_length=300, default="Описание элемента")
 #    colors = models.ManyToManyField(to=Color)
 
-#    def __repr__(self):
-#        return f'Item({self.name})'
+    def __repr__(self):
+        return f'Item({self.name})'
