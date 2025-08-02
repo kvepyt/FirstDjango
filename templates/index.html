@@ -1,8 +1,12 @@
 {% extends 'base.html' %}
 {% block title %} Main page {% endblock %}
 
+{% load static %}
+
 {% block content %}
     {{ block.super }}
+    <br>
+    <img width="50px" src="{% static "images/django.svg" %}" alt="my_image">
 
     <h2>Это главная страница сайта</h2> <br>
     <i>Сайт пока в разработке</i><br>

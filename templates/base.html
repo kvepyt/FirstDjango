@@ -11,17 +11,17 @@
     {% endblock %}
 </head>
 <body>
-    <header>
-        {% include "header.html" %}
-    </header>
+
+{% include "header.html" %}
+
 <main>
+
     {#  Содержимое этого блока уникально на каждой странице #}
     {% block content %}
     {% endblock %}
 </main>
-<footer>
-    {% include "footer.html" %}
-    {# Общий футер всех страниц #}
-</footer>
+
+{% include "footer.html" %}
+
 </body>
 </html>
