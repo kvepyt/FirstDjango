@@ -1,0 +1,91 @@
+[
+{
+    "model": "MainApp.color",
+    "pk": 1,
+    "fields": {
+        "name": "red"
+    }
+},
+{
+    "model": "MainApp.color",
+    "pk": 2,
+    "fields": {
+        "name": "green"
+    }
+},
+{
+    "model": "MainApp.color",
+    "pk": 3,
+    "fields": {
+        "name": "blue"
+    }
+},
+{
+    "model": "MainApp.item",
+    "pk": 1,
+    "fields": {
+        "name": "Кроссовки",
+        "brand": "abibas",
+        "count": 10,
+        "description": "Удобные для бега",
+        "colors": [
+            1,
+            2
+        ]
+    }
+},
+{
+    "model": "MainApp.item",
+    "pk": 2,
+    "fields": {
+        "name": "Кепка",
+        "brand": "Levis",
+        "count": 37,
+        "description": "Модная",
+        "colors": [
+            1
+        ]
+    }
+},
+{
+    "model": "MainApp.item",
+    "pk": 3,
+    "fields": {
+        "name": "Картофель фри",
+        "brand": "Мираторг",
+        "count": 584,
+        "description": "Натуральный вкус",
+        "colors": [
+            3
+        ]
+    }
+},
+{
+    "model": "MainApp.item",
+    "pk": 4,
+    "fields": {
+        "name": "Вода газированная 1л",
+        "brand": "Coca-Cola",
+        "count": 263,
+        "description": "3 по цене 2х",
+        "colors": [
+            2,
+            3
+        ]
+    }
+},
+{
+    "model": "MainApp.item",
+    "pk": 5,
+    "fields": {
+        "name": "Куртка кожаная",
+        "brand": "Lee",
+        "count": 0,
+        "description": "Теплая",
+        "colors": [
+            1,
+            3
+        ]
+    }
+}
+]
