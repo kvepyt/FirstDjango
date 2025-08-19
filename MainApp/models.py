@@ -1,14 +1,21 @@
+"""import models"""
+
 from django.db import models
+
 
 # Create your models here.
 class Color(models.Model):
+    """Colors of items"""
+
     name = models.CharField(max_length=32)
 
     def __repr__(self):
-        return f'Color({self.name})'
+        return f"Color({self.name})"
 
 
 class Item(models.Model):
+    """Model of items"""
+
     name = models.CharField(max_length=100)
     brand = models.CharField(max_length=100)
     count = models.PositiveIntegerField()
@@ -16,4 +23,4 @@ class Item(models.Model):
     colors = models.ManyToManyField(to=Color)
 
     def __repr__(self):
-        return f'Item({self.name})'
+        return f"Item({self.name})"
